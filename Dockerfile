@@ -4,6 +4,5 @@ RUN mkdir -p /opt/hsqldb/data/
 WORKDIR /opt/hsqldb/
 ADD run.sh /opt/hsqldb/run.sh
 RUN chmod +x /opt/hsqldb/run.sh
-ADD hsqldb-default.properties /opt/hsqldb/config/hsqldb.properties
 RUN curl -o hsqldb-2.6.1.jar  https://repo1.maven.org/maven2/org/hsqldb/hsqldb/2.6.1/hsqldb-2.6.1.jar
 ENTRYPOINT ["/opt/hsqldb/run.sh"]
