@@ -1,6 +1,7 @@
 FROM openjdk:17
 
-RUN mkdir -p /opt/hsqldb/data/
+RUN mkdir -p /opt/hsqldb/data
+VOLUME /opt/hsqldb/data
 WORKDIR /opt/hsqldb/
 ADD run.sh /opt/hsqldb/run.sh
 RUN chmod +x /opt/hsqldb/run.sh
